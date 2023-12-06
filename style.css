@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2; /* Oder ein anderes gewünschtes Farbschema */
+}
+
+.start-container {
+    /* Zentriert den Start-Button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
+    /* Fügen Sie hier weitere Stile hinzu, um den Button zu gestalten */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sichtbar machen, wenn aktiv */
+.visible {
+    display: block;
+}
