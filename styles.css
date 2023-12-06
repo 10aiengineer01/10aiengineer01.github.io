@@ -48,7 +48,7 @@ body {
 }
 
 img {
-  width: 100%; /* Bild füllt den Container aus */
+  width: 200%; /* Bild füllt den Container aus */
   height: auto;
   border-radius: 10px; /* Größerer Radius für eine größere Karte */
 }
