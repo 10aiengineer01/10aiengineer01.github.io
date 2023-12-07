@@ -7,17 +7,28 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="card-container" onclick="flipCard()">
-        <div class="card">
-            <div class="card-face card-front">
-                <img id="randomCard" src="" alt="Zufällige Karte">
-            </div>
-            <div class="card-face card-back">
-                <!-- Hier fügen wir das Platzhalterbild für die Rückseite ein -->
-                <img src="background.jpg" alt="Rückseite der Karte">
+    <div class="container text-center mt-5">
+        <!-- Container für die Anzeige der Namen -->
+        <div class="name-display-container" id="nameDisplayContainer">
+            <div class="name-display" id="nameDisplay"></div>
+        </div>
+
+        <!-- Container für die Karte -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-face card-front">
+                    <img id="randomCard" src="" alt="Vorderseite der Karte">
+                </div>
+                <div class="card-face card-back">
+                    <img src="background.jpg" alt="Rückseite der Karte">
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.7.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 
