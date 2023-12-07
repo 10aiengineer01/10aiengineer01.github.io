@@ -14,11 +14,6 @@ body, html {
     align-items: center;
 }
 
-.start-button {
-    cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
-    /* Fügen Sie hier weitere Stile hinzu, um den Button zu gestalten */
-}
-
 .hidden {
     display: none;
 }
@@ -27,3 +22,4 @@ body, html {
 .visible {
     display: block;
 }
+
