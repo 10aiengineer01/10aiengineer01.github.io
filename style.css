@@ -41,8 +41,8 @@ body, html {
     top: 0; /* Setzt den Button an den oberen Rand des Elternelements */
     left: 50%; /* Zentriert den Button horizontal */
     transform: translateX(-50%); /* Korrigiert die horizontale Zentrierung basierend auf der Button-Breite */
-    width: 800px; /* Setzt eine bestimmte Breite für den Button */
-    height: 800px; /* Setzt eine bestimmte Höhe für den Button */
+    width: 1000px; /* Setzt eine bestimmte Breite für den Button */
+    height: 1000px; /* Setzt eine bestimmte Höhe für den Button */
     font-size: 0.8em; /* Verkleinert die Schriftgröße entsprechend der neuen Button-Größe */
 }
 
