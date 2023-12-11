@@ -4,11 +4,10 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f2f2f2; /* Oder ein anderes gewünschtes Farbschema */
+    background: #f2f2f2;
 }
 
 .start-container {
-    /* Zentriert den Start-Button */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +17,25 @@ body, html {
     display: none;
 }
 
-/* Sichtbar machen, wenn aktiv */
 .visible {
     display: block;
+}
+
+#nameInputContainer {
+    font-size: 1.8em;
+}
+
+#nameList {
+    font-size: 1.8em;
+}
+
+#nameInput, #saveButton, #continueButton {
+    font-size: 1.8em;
+}
+
+/* Optional: Größere Buttons */
+#saveButton, #continueButton {
+    padding: 10px 20px;
+    font-size: 1.8em;
 }
 
