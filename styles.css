@@ -25,8 +25,8 @@ body {
 
 .card-container {
   position: relative; /* Entfernt 'fixed', um auf Scrollen zu reagieren */
-  width: 600px;
-  height: 800px;
+  width: 800px;
+  height: 1000px;
   margin-top: 20%;
   margin-top: calc(10% + 200px);
 }
