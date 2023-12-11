@@ -24,10 +24,11 @@ body {
 }
 
 .card-container {
-  perspective: 1000px;
-  width: 300px; /* Neue Breite des Containers */
-  height: 450px; /* Neue Höhe des Containers */
-  position: relative; /* Für absolute Positionierung der Kinder */
+  position: relative; /* Entfernt 'fixed', um auf Scrollen zu reagieren */
+  width: 400px;
+  height: 600px;
+  margin-top: 20%;
+  margin-top: calc(10% + 200px);
 }
 
 .card {
@@ -69,16 +70,14 @@ img {
 }
 
 .name-display-container {
-  position: fixed; /* Element an einer festen Position auf dem Bildschirm */
-  top: 50%; /* Vertikale Zentrierung auf dem Bildschirm */
-  left: 50%; /* Horizontale Zentrierung auf dem Bildschirm */
-  transform: translate(-50%, -50%); /* Verschiebt das Element genau in die Mitte des Bildschirms */
-  z-index: 1000; /* Stellt sicher, dass der Name über der Karte angezeigt wird */
-  opacity: 0; /* Startet unsichtbar */
-  visibility: hidden; /* Verhindert Klicks, wenn nicht sichtbar */
-  transition: opacity 0.6s ease-in-out, visibility 0s linear 0.6s; /* Übergänge für das Ein- und Ausblenden */
-  pointer-events: none; /* Erlaubt Klicks auf darunterliegende Elemente */
-  animation: moveName 3s ease-in-out backwards;
+  position: fixed; /* Das Element bleibt an der gleichen Stelle, auch wenn gescrollt wird */
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Stellen Sie sicher, dass der Name über der Karte angezeigt wird */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .name-display {
@@ -100,12 +99,7 @@ img {
 }
 
 .name-display-container {
-  position: fixed; /* Element at a fixed position on the screen */
-  top: 0; /* Align to the top of the screen */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%) translateY(-100%); /* Start hidden above the view */
-  opacity: 0;
-  visibility: hidden; /* Start as hidden to prevent clicks */
-  transition: opacity 0.6s ease-in-out, visibility 0s linear 0.6s, transform 0.6s ease-in-out; /* Smooth transition for sliding in */
-  /* ... existing properties ... */
+  /* ... */
+  /* Angenommen, die Höhe des name-display-containers ist 200px */
+  height: 200px; /* Setzen Sie die tatsächliche Höhe hier ein */
 }
