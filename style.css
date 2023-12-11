@@ -22,20 +22,19 @@ body, html {
 }
 
 #nameInputContainer {
-    font-size: 1.8em;
+    font-size: 2.5em; 
 }
 
 #nameList {
-    font-size: 1.8em;
+    font-size: 2.5em; 
 }
 
 #nameInput, #saveButton, #continueButton {
-    font-size: 1.8em;
+    font-size: 2.5em; 
 }
 
-/* Optional: Größere Buttons */
 #saveButton, #continueButton {
-    padding: 10px 20px;
-    font-size: 1.8em;
+    padding: 10px 20px; 
+    font-size: 2.5em; 
 }
 
