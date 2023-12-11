@@ -89,6 +89,7 @@ img {
   border-radius: 10px; /* Abgerundete Ecken für den Namen-Hintergrund */
   padding: 20px 40px; /* Innenabstand um den Namen */
   white-space: nowrap; /* Verhindert Zeilenumbrüche im Namen */
+  position: relative;
 }
 
 /* Klasse, um die Anzeige sichtbar zu machen */
