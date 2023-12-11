@@ -1,3 +1,15 @@
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }  
+
 body, html {
     height: 100%;
     margin: 0;
@@ -5,6 +17,9 @@ body, html {
     justify-content: center;
     align-items: center;
     background: #f2f2f2;
+    background: linear-gradient(-45deg, #6a0dad, #38d9a9, #3b82f6);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 .start-container {
@@ -22,19 +37,19 @@ body, html {
 }
 
 #nameInputContainer {
-    font-size: 2.5em; 
+    font-size: 2.0em; 
 }
 
 #nameList {
-    font-size: 2.5em; 
+    font-size: 2.0em; 
 }
 
 #nameInput, #saveButton, #continueButton {
-    font-size: 2.5em; 
+    font-size: 2.0em; 
 }
 
 #saveButton, #continueButton {
     padding: 10px 20px; 
-    font-size: 2.5em; 
+    font-size: 2.0em; 
 }
 
