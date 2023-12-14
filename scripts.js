@@ -32,7 +32,7 @@ function flipCard() {
 function loadRandomCard() {
     let randomCardNumber;
     do {
-        randomCardNumber = Math.floor(Math.random() * 125) + 1;
+        randomCardNumber = Math.floor(Math.random() * 123) + 1;
     } while (randomCardNumber === previousCardNumber); // Vermeide die unmittelbare Wiederholung der gleichen Karte
 
     previousCardNumber = randomCardNumber; // Speichere die Nummer der aktuellen Karte
