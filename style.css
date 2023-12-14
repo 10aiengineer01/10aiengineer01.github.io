@@ -37,13 +37,29 @@ body, html {
 }
 
 #startButton {
-    position: absolute; /* Positioniert den Button absolut im Bezug zum nächstgelegenen relativ positionierten Elternelement */
-    top: 50%; /* Setzt den Button an den oberen Rand des Elternelements */
-    left: 50%; /* Zentriert den Button horizontal */
-    transform: translateX(-50%, -50%); /* Korrigiert die horizontale Zentrierung basierend auf der Button-Breite */
-    width: 1600px; /* Setzt eine bestimmte Breite für den Button */
-    height: 1600px; /* Setzt eine bestimmte Höhe für den Button */
-    font-size: 0.8em; /* Verkleinert die Schriftgröße entsprechend der neuen Button-Größe */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 300px; /* Maximalbreite des Buttons */
+    max-height: 300px; /* Maximalhöhe des Buttons */
+    width: 50%; /* Breite des Buttons in Prozent */
+    height: auto; /* Höhe des Buttons proportional zur Breite */
+}
+
+/* Media-Queries für kleinere Bildschirme */
+@media (max-width: 600px) {
+    #startButton {
+        max-width: 200px; 
+        width: 60%; /* Größerer prozentualer Anteil auf kleinen Bildschirmen */
+    }
+}
+
+@media (max-width: 400px) {
+    #startButton {
+        max-width: 150px;
+        width: 70%; /* Noch größerer prozentualer Anteil auf sehr kleinen Bildschirmen */
+    }
 }
 
 #nameInputContainer {
