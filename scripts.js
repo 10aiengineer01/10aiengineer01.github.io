@@ -1,6 +1,6 @@
 let names = JSON.parse(localStorage.getItem('names')) || [];
 let previousNameIndex = -1;
-let previousCardNumber = -1; // Variable zur Speicherung der zuletzt angezeigten Kartennummer
+let drawnCards = new Set(); // Ein Set, um gezogene Karten zu speichern
 
 document.addEventListener('DOMContentLoaded', function() {
     loadRandomCard();
@@ -33,9 +33,13 @@ function loadRandomCard() {
     let randomCardNumber;
     do {
         randomCardNumber = Math.floor(Math.random() * 123) + 1;
-    } while (randomCardNumber === previousCardNumber); // Vermeide die unmittelbare Wiederholung der gleichen Karte
+    } while (drawnCards.has(randomCardNumber)); // Überprüfe, ob die Karte bereits gezogen wurde
 
-    previousCardNumber = randomCardNumber; // Speichere die Nummer der aktuellen Karte
+    drawnCards.add(randomCardNumber); // Füge die gezogene Karte zum Set hinzu
+    if (drawnCards.size >= 50) {
+        drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück, wenn 50 Karten erreicht sind
+    }
+
     var cardImage = document.getElementById('randomCard');
     cardImage.src = 'cards/' + randomCardNumber + '.png';
 }
