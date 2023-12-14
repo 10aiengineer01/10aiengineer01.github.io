@@ -41,8 +41,8 @@ body, html {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    max-width: 500px; /* Maximalbreite des Buttons */
-    max-height: 500px; /* Maximalhöhe des Buttons */
+    max-width: 800px; /* Maximalbreite des Buttons */
+    max-height: 800px; /* Maximalhöhe des Buttons */
     width: 50%; /* Breite des Buttons in Prozent */
     height: auto; /* Höhe des Buttons proportional zur Breite */
 }
@@ -50,14 +50,14 @@ body, html {
 /* Media-Queries für kleinere Bildschirme */
 @media (max-width: 600px) {
     #startButton {
-        max-width: 400px; 
+        max-width: 500px; 
         width: 60%; /* Größerer prozentualer Anteil auf kleinen Bildschirmen */
     }
 }
 
 @media (max-width: 400px) {
     #startButton {
-        max-width: 250px;
+        max-width: 350px;
         width: 70%; /* Noch größerer prozentualer Anteil auf sehr kleinen Bildschirmen */
     }
 }
