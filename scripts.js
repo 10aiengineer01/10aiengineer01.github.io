@@ -36,7 +36,7 @@ function loadRandomCard() {
     } while (drawnCards.has(randomCardNumber)); // Überprüfe, ob die Karte bereits gezogen wurde
 
     drawnCards.add(randomCardNumber); // Füge die gezogene Karte zum Set hinzu
-    if (drawnCards.size >= 50) {
+    if (drawnCards.size >= 70) {
         drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück, wenn 50 Karten erreicht sind
     }
 
