@@ -29,7 +29,7 @@ body {
   height: 1000px;
   margin-top: 20%;
   margin-top: calc(10% + 200px);
-  margin-left: -50px;
+  margin-left: -54px;
 }
 
 .card {
@@ -37,7 +37,7 @@ body {
   height: 120%;
   transform-style: preserve-3d;
   transition: transform 0.6s;
-  transform: translateX(-50px);
+  transform: translateX(-54px);
 }
 
 .card-face {
@@ -63,7 +63,7 @@ body {
 
 .card.flipped {
   transform: rotateY(180deg);
-  transform: translateX(-50px) rotateY(180deg); /* Dreht die Karte um, um die Rückseite zu zeigen */
+  transform: translateX(-54px) rotateY(180deg); /* Dreht die Karte um, um die Rückseite zu zeigen */
 }
 
 img {
