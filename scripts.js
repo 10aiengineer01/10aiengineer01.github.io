@@ -30,7 +30,7 @@ function loadRandomCard() {
         drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück, wenn 175 Karten erreicht sind
     }
 
-    if (names.length > 0 && randomCardNumber < 152) {
+    if (names.length > 0 && randomCardNumber < 158) {
         let randomIndex;
         do {
             randomIndex = Math.floor(Math.random() * names.length);
