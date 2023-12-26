@@ -6,12 +6,22 @@ document.getElementById('startButton').addEventListener('click', function() {
 });
 
 document.getElementById('saveButton').addEventListener('click', function() {
-    var name = document.getElementById('nameInput').value;
-    if(name) {
-        names.push(name); // Fügt den Namen der Liste hinzu
+    var name = document.getElementById('nameInput').value.trim(); // Entferne Whitespaces am Anfang und Ende
+    
+    if (name.toLowerCase() === 'jarls') {
+        // Die vier spezifischen Namen hinzufügen, wenn "Jarls" eingegeben wird
+        names.push('Rutgar', 'Björn', 'Tarz', 'Grobian');
         updateNameList(); // Aktualisiert die Liste der Namen
         document.getElementById('nameInput').value = ''; // Setzt das Eingabefeld zurück
-        document.getElementById('continueButton').classList.remove('hidden'); // Zeigt den "Weiter"-Button an
+    } else if (name) {
+        names.push(name); // Fügt den eingegebenen Namen der Liste hinzu
+        updateNameList(); // Aktualisiert die Liste der Namen
+        document.getElementById('nameInput').value = ''; // Setzt das Eingabefeld zurück
+    }
+
+    // Anzeigen des "Weiter"-Buttons, wenn mindestens ein Name in der Liste ist
+    if(names.length > 0) { 
+        document.getElementById('continueButton').classList.remove('hidden');
     }
 });
 
@@ -37,6 +47,6 @@ function updateNameDisplay(name) {
     var nameDisplayContainer = document.getElementById('nameDisplayContainer');
     nameDisplayContainer.style.animation = 'none'; // Setzt die Animation zurück
     setTimeout(() => {
-      nameDisplayContainer.style.animation = ''; // Startet die Animation
+        nameDisplayContainer.style.animation = ''; // Startet die Animation
     }, 10); // Ein kleiner Timeout, um die Animation zurückzusetzen
-  }
+}
