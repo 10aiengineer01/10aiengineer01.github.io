@@ -26,7 +26,7 @@ function loadRandomCard() {
     } while (drawnCards.has(randomCardNumber)); // Überprüfe, ob die Karte bereits gezogen wurde
 
     drawnCards.add(randomCardNumber); // Füge die gezogene Karte zum Set hinzu
-    if (drawnCards.size >= 175) {
+    if (drawnCards.size >= 200) {
         drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück, wenn 175 Karten erreicht sind
     }
 
