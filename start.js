@@ -8,6 +8,7 @@ document.getElementById('startButton').addEventListener('click', function() {
 document.getElementById('saveButton').addEventListener('click', function() {
     var name = document.getElementById('nameInput').value.trim(); // Entferne Whitespaces am Anfang und Ende
     
+    // Vergleicht die Eingabe in Kleinbuchstaben, unabhängig davon, wie es eingegeben wurde.
     if (name.toLowerCase() === 'jarls') {
         // Die vier spezifischen Namen hinzufügen, wenn "Jarls" eingegeben wird
         names.push('Rutgar', 'Björn', 'Tarz', 'Grobian');
@@ -20,7 +21,7 @@ document.getElementById('saveButton').addEventListener('click', function() {
     }
 
     // Anzeigen des "Weiter"-Buttons, wenn mindestens ein Name in der Liste ist
-    if(names.length > 0) { 
+    if(names.length > 0) {
         document.getElementById('continueButton').classList.remove('hidden');
     }
 });
@@ -39,14 +40,4 @@ function updateNameList() {
         listItem.classList.add('list-group-item');
         list.appendChild(listItem);
     });
-}
-
-function updateNameDisplay(name) {
-    var nameDisplay = document.getElementById('nameDisplay');
-    nameDisplay.textContent = name; // Setzt den aktuellen Namen
-    var nameDisplayContainer = document.getElementById('nameDisplayContainer');
-    nameDisplayContainer.style.animation = 'none'; // Setzt die Animation zurück
-    setTimeout(() => {
-        nameDisplayContainer.style.animation = ''; // Startet die Animation
-    }, 10); // Ein kleiner Timeout, um die Animation zurückzusetzen
 }
