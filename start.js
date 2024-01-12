@@ -1,41 +1,63 @@
-let names = [];
-
+// Event-Listener für den Startbutton, um das Modus-Auswahlmenü zu öffnen
 document.getElementById('startButton').addEventListener('click', function() {
-    document.getElementById('nameInputContainer').classList.remove('hidden');
-    this.classList.add('hidden'); // Versteckt den Start-Button
+    // Das Modus-Auswahlmenü wird sichtbar gemacht
+    document.getElementById('modeSelectionContainer').classList.remove('hidden');
+    // Der Startbutton wird versteckt
+    this.classList.add('hidden');
 });
 
+// Event-Listener für die Modusauswahl-Buttons
+document.getElementById('allCardsButton').addEventListener('click', function() {
+    selectMode('allCards');
+});
+
+document.getElementById('normalButton').addEventListener('click', function() {
+    selectMode('normal');
+});
+
+document.getElementById('over18Button').addEventListener('click', function() {
+    selectMode('over18');
+});
+
+// Hilfsfunktion zur Auswahl des Modus und zur Anzeige des Namenseingabefeldes
+function selectMode(mode) {
+    localStorage.setItem('selectedMode', mode);
+    document.getElementById('modeSelectionContainer').classList.add('hidden');
+    document.getElementById('nameInputContainer').classList.remove('hidden');
+}
+
+// Event-Listener für den Speichern-Button
 document.getElementById('saveButton').addEventListener('click', function() {
-    var name = document.getElementById('nameInput').value.trim(); // Entferne Whitespaces am Anfang und Ende
-    
-    // Vergleicht die Eingabe in Kleinbuchstaben, unabhängig davon, wie es eingegeben wurde.
-    if (name.toLowerCase() === 'jarls') {
-        // Die vier spezifischen Namen hinzufügen, wenn "Jarls" eingegeben wird
-        names.push('Rutgar', 'Björn', 'Tarz', 'Grobian');
-        updateNameList(); // Aktualisiert die Liste der Namen
-        document.getElementById('nameInput').value = ''; // Setzt das Eingabefeld zurück
-    } else if (name) {
-        names.push(name); // Fügt den eingegebenen Namen der Liste hinzu
-        updateNameList(); // Aktualisiert die Liste der Namen
+    let name = document.getElementById('nameInput').value.trim();
+    if (name) {
+        names.push(name); // Fügt den Namen zur Liste hinzu
+        updateNameList();
         document.getElementById('nameInput').value = ''; // Setzt das Eingabefeld zurück
     }
-
-    // Anzeigen des "Weiter"-Buttons, wenn mindestens ein Name in der Liste ist
-    if(names.length > 0) {
+    if (names.length > 1) {
         document.getElementById('continueButton').classList.remove('hidden');
     }
 });
 
+// Event-Listener für den Weiter-Button
 document.getElementById('continueButton').addEventListener('click', function() {
-    localStorage.setItem('names', JSON.stringify(names)); // Speichert die Liste im Local Storage
-    window.location.href = 'startpage.html'; // Weiterleitung zur Hauptseite
+    if (names.length >= 2) {
+        localStorage.setItem('names', JSON.stringify(names)); // Speichert die Namen im Local Storage
+        window.location.href = 'startpage.html'; // Weiterleitung zur 'startpage.html'
+    } else {
+        // Optional: Ausgabe einer Warnmeldung
+        alert('Bitte mindestens zwei Namen eingeben.');
+    }
 });
 
+let names = []; // Array zum Speichern der Namen
+
+// Funktion zum Aktualisieren der Namensliste auf der Benutzeroberfläche
 function updateNameList() {
-    const list = document.getElementById('nameList');
+    let list = document.getElementById('nameList');
     list.innerHTML = ''; // Leert die Liste
     names.forEach(function(name) {
-        const listItem = document.createElement('li');
+        let listItem = document.createElement('li');
         listItem.textContent = name;
         listItem.classList.add('list-group-item');
         list.appendChild(listItem);

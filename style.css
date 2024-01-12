@@ -28,14 +28,6 @@ body, html {
     align-items: center;
 }
 
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
 #startButton {
     position: absolute; 
     top: 50%; 
@@ -97,4 +89,52 @@ body, html {
     border: 1px solid rgba(0, 0, 0, 0.1); /* Subtiler Rahmen */
     backdrop-filter: blur(10px); /* Weichzeichnen des Hintergrunds hinter dem Kasten */
 }
+
+.mode-selection-container {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 255, 200, 0.7); /* Hintergrundfarbe und Transparenz anpassen */
+    border-radius: 25px; /* Abgerundete Ecken */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+}
+
+.mode-title, .team-modes {
+    background-color: rgba(255, 255, 255, 0.3); /* Transluzenter Weißer Hintergrund */
+    color: #000000; /* Textfarbe */
+    padding: 10px 20px;
+    margin-bottom: 10px; /* Abstand */
+    border-radius: 15px; /* Abgerundete Ecken */
+    font-size: 1.5em; /* Schriftgröße */
+}
+
+.mode-button {
+    display: block; /* Sorgt dafür, dass die Buttons untereinander stehen */
+    width: 80%; /* Breite der Buttons */
+    margin: 10px auto; /* Zentriert die Buttons horizontal */
+    padding: 10px 0;
+    font-size: 1.2em;
+    border-radius: 15px; /* Abgerundete Ecken */
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1); /* Leicht transparenter schwarzer Hintergrund */
+    color: white; /* Weiße Textfarbe */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatten für die Buttons */
+    transition: background-color 0.3s ease; /* Übergangseffekt */
+}
+
+.mode-button:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Dunklerer Hintergrund beim Hover */
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 
