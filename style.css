@@ -1,14 +1,14 @@
 @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-}  
+}
 
 body, html {
     height: 100%;
@@ -16,7 +16,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f2f2f2;
     background: linear-gradient(-45deg, #6a0dad, #38d9a9, #3b82f6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -29,104 +28,106 @@ body, html {
 }
 
 #startButton {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    max-width: 800px; /* Maximalbreite des Buttons */
-    max-height: 800px; /* Maximalhöhe des Buttons */
-    width: 50%; /* Breite des Buttons in Prozent */
-    height: auto; /* Höhe des Buttons proportional zur Breite */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    max-height: 800px;
+    width: 50%;
+    height: auto;
 }
 
-/* Media-Queries für kleinere Bildschirme */
 @media (max-width: 600px) {
     #startButton {
-        max-width: 500px; 
-        width: 60%; /* Größerer prozentualer Anteil auf kleinen Bildschirmen */
+        max-width: 500px;
+        width: 60%;
     }
 }
 
 @media (max-width: 400px) {
     #startButton {
         max-width: 350px;
-        width: 70%; /* Noch größerer prozentualer Anteil auf sehr kleinen Bildschirmen */
+        width: 70%;
     }
 }
 
 #nameInputContainer {
-    font-size: 1.9em; 
+    font-size: 1.9em;
 }
 
 #nameList {
-    font-size: 1.9em; 
+    font-size: 1.9em;
 }
 
 #nameInput, #saveButton, #continueButton {
-    font-size: 1.9em; 
+    font-size: 1.9em;
 }
 
 #saveButton.custom-button, #continueButton.custom-button {
-    padding: 10px 20px; 
-    font-size: 1.9em; 
-    border: 2px solid white; /* Eine sichtbare weiße Außenlinie */
+    padding: 10px 20px;
+    font-size: 1.9em;
+    border: 2px solid white;
     background-image: linear-gradient(to right, rgba(106, 13, 173, 0.8), rgba(56, 217, 169, 0.8), rgba(59, 130, 246, 0.8));
-    color: white; /* Weiße Textfarbe für besseren Kontrast */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
-    transition: all 0.3s ease; /* Glatte Übergangseffekte */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 #saveButton.custom-button:hover, #continueButton.custom-button:hover {
-    border-color: #ddd; /* Verändert die Border-Farbe beim Hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten beim Hover */
+    border-color: #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .kasten {
-    background-color: rgba(255, 255, 255, 0.8); /* Weiß mit Transparenz */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
-    border-radius: 15px; /* Abgerundete Ecken */
-    padding: 20px; /* Innenabstand */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtiler Rahmen */
-    backdrop-filter: blur(10px); /* Weichzeichnen des Hintergrunds hinter dem Kasten */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .mode-selection-container {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: rgba(0, 255, 200, 0.7); /* Hintergrundfarbe und Transparenz anpassen */
-    border-radius: 25px; /* Abgerundete Ecken */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+    background: rgba(0, 255, 200, 0.7);
+    border-radius: 25px;
+    padding: 40px; /* Erhöhen für mehr Innenraum */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Erhöhen für mehr Breite */
+    max-width: 600px; /* Erhöhen für maximale Breite */
+    /* Restliche Stile beibehalten */
 }
 
 .mode-title, .team-modes {
-    background-color: rgba(255, 255, 255, 0.3); /* Transluzenter Weißer Hintergrund */
-    color: #000000; /* Textfarbe */
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000000;
     padding: 10px 20px;
-    margin-bottom: 10px; /* Abstand */
-    border-radius: 15px; /* Abgerundete Ecken */
-    font-size: 1.5em; /* Schriftgröße */
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: 2em; /* Schriftgröße des Titels anpassen */
 }
 
 .mode-button {
-    display: block; /* Sorgt dafür, dass die Buttons untereinander stehen */
-    width: 80%; /* Breite der Buttons */
-    margin: 10px auto; /* Zentriert die Buttons horizontal */
-    padding: 10px 0;
-    font-size: 1.2em;
-    border-radius: 15px; /* Abgerundete Ecken */
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px 0;
+    font-size: 1.5em; /* Schriftgröße der Buttons anpassen */
+    border-radius: 15px;
     border: none;
-    background-color: rgba(0, 0, 0, 0.1); /* Leicht transparenter schwarzer Hintergrund */
-    color: white; /* Weiße Textfarbe */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatten für die Buttons */
-    transition: background-color 0.3s ease; /* Übergangseffekt */
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .mode-button:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Dunklerer Hintergrund beim Hover */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hidden {
@@ -137,4 +138,12 @@ body, html {
     display: block;
 }
 
-
+@media (max-width: 768px) {
+    .mode-selection-container {
+        width: 80%; /* Breiter auf kleineren Bildschirmen */
+    }
+    
+    .mode-button, .mode-title {
+        font-size: 1.2em; /* Kleinere Schriftgröße auf kleineren Bildschirmen */
+    }
+}
