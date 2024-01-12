@@ -96,28 +96,27 @@ body, html {
     text-align: center;
     background: rgba(0, 255, 200, 0.7);
     border-radius: 25px;
-    padding: 40px; /* Erhöhen für mehr Innenraum */
+    padding: 60px; /* Erhöht für mehr Innenraum */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 60%; /* Erhöhen für mehr Breite */
-    max-width: 600px; /* Erhöhen für maximale Breite */
-    /* Restliche Stile beibehalten */
+    width: 70%; /* Erhöht für mehr Breite */
+    max-width: 800px; /* Erhöht für maximale Breite */
 }
 
 .mode-title, .team-modes {
     background-color: rgba(255, 255, 255, 0.3);
     color: #000000;
-    padding: 10px 20px;
-    margin-bottom: 10px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
     border-radius: 15px;
-    font-size: 2em; /* Schriftgröße des Titels anpassen */
+    font-size: 2.5em; /* Schriftgröße des Titels anpassen */
 }
 
 .mode-button {
     display: block;
     width: 80%;
-    margin: 10px auto;
-    padding: 15px 0;
-    font-size: 1.5em; /* Schriftgröße der Buttons anpassen */
+    margin: 20px auto;
+    padding: 20px 0;
+    font-size: 2em; /* Schriftgröße der Buttons anpassen */
     border-radius: 15px;
     border: none;
     background-color: rgba(0, 0, 0, 0.1);
@@ -140,10 +139,10 @@ body, html {
 
 @media (max-width: 768px) {
     .mode-selection-container {
-        width: 80%; /* Breiter auf kleineren Bildschirmen */
+        width: 90%; /* Breiter auf kleineren Bildschirmen */
     }
     
     .mode-button, .mode-title {
-        font-size: 1.2em; /* Kleinere Schriftgröße auf kleineren Bildschirmen */
+        font-size: 2em; /* Kleinere Schriftgröße auf kleineren Bildschirmen */
     }
 }
