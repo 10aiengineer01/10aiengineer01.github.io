@@ -32,16 +32,41 @@ function loadRandomCard() {
         drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück
     }
 
-    if (names.length > 0) {
-        let randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * names.length);
-        } while (randomIndex === previousNameIndex);
+    if (selectedMode === 'allCards' && randomCardNumber <= 152) {
+        // Zeige den Namen an, wenn die Karte im Bereich von 1 bis 152 liegt
+        if (names.length > 0) {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * names.length);
+            } while (randomIndex === previousNameIndex);
 
-        previousNameIndex = randomIndex;
-        updateNameDisplay(names[randomIndex]);
+            previousNameIndex = randomIndex;
+            updateNameDisplay(names[randomIndex]);
+        }
+    } else if (selectedMode === 'normal' && randomCardNumber <= 82) {
+        // Für normale Karten, halte die vorherige Logik bei
+        if (names.length > 0) {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * names.length);
+            } while (randomIndex === previousNameIndex);
+
+            previousNameIndex = randomIndex;
+            updateNameDisplay(names[randomIndex]);
+        }
+    } else if (selectedMode === 'over18' && randomCardNumber <= 96) {
+        // Für 18+ Karten, zeige den Namen nur an, wenn die Karte zwischen 1 und 96 liegt
+        if (names.length > 0) {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * names.length);
+            } while (randomIndex === previousNameIndex);
+
+            previousNameIndex = randomIndex;
+            updateNameDisplay(names[randomIndex]);
+        }
     } else {
-        updateNameDisplay(''); // Leere den Namen, wenn keine Namen vorhanden sind
+        updateNameDisplay(''); // Leere den Namen in allen anderen Fällen
     }
 
     var cardImage = document.getElementById('randomCard');
@@ -62,8 +87,8 @@ function updateNameDisplay(name) {
 function getCardFolder(mode) {
     const folders = {
         'allCards': { path: 'cards', count: 200 }, // Angenommene Anzahl für alle Karten
-        'normal': { path: 'normal_cards', count: 150 }, // Angenommene Anzahl für normale Karten
-        'over18': { path: 'sexy_cards', count: 50 } // Angenommene Anzahl für 18+ Karten
+        'normal': { path: 'normal_cards', count: 115 }, // Angenommene Anzahl für normale Karten
+        'over18': { path: 'sexy_cards', count: 115 } // Angenommene Anzahl für 18+ Karten
     };
     return folders[mode] || folders['normal']; // Default zu 'normal', falls kein Modus übereinstimmt
 }
