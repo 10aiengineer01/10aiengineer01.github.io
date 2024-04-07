@@ -54,14 +54,17 @@ body, html {
 
 #nameInputContainer {
     font-size: 1.9em;
+    border-radius: 20px;
 }
 
 #nameList {
     font-size: 1.9em;
+    border-radius: 20px;
 }
 
 #nameInput, #saveButton, #continueButton {
     font-size: 1.9em;
+    border-radius: 20px;
 }
 
 #saveButton.custom-button, #continueButton.custom-button {
@@ -72,6 +75,7 @@ body, html {
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    border-radius: 20px;
 }
 
 #saveButton.custom-button:hover, #continueButton.custom-button:hover {
