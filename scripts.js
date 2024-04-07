@@ -33,7 +33,7 @@ function loadRandomCard() {
     }
 
     if (selectedMode === 'allCards' && randomCardNumber <= 196) {
-        // Zeige den Namen an, wenn die Karte im Bereich von 1 bis 152 liegt
+        // Zeige den Namen an, wenn die Karte im Bereich von 1 bis 196 liegt
         if (names.length > 0) {
             let randomIndex;
             do {
@@ -54,7 +54,7 @@ function loadRandomCard() {
             previousNameIndex = randomIndex;
             updateNameDisplay(names[randomIndex]);
         }
-    } else if (selectedMode === 'over18' && randomCardNumber <= 96) {
+    } else if (selectedMode === 'over18' && randomCardNumber <= 100) {
         // Für 18+ Karten, zeige den Namen nur an, wenn die Karte zwischen 1 und 96 liegt
         if (names.length > 0) {
             let randomIndex;
