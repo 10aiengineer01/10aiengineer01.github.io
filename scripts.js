@@ -32,7 +32,7 @@ function loadRandomCard() {
         drawnCards.clear(); // Setze die Liste der gezogenen Karten zurück
     }
 
-    if (selectedMode === 'allCards' && randomCardNumber <= 152) {
+    if (selectedMode === 'allCards' && randomCardNumber <= 196) {
         // Zeige den Namen an, wenn die Karte im Bereich von 1 bis 152 liegt
         if (names.length > 0) {
             let randomIndex;
