@@ -43,7 +43,7 @@ function loadRandomCard() {
             previousNameIndex = randomIndex;
             updateNameDisplay(names[randomIndex]);
         }
-    } else if (selectedMode === 'normal' && randomCardNumber <= 82) {
+    } else if (selectedMode === 'normal' && randomCardNumber <= 136) {
         // Für normale Karten, halte die vorherige Logik bei
         if (names.length > 0) {
             let randomIndex;
